@@ -1,0 +1,237 @@
+|SPIComms_top
+clk => clk.IN2
+sck => sck.IN1
+mosi => mosi.IN1
+cs => cs.IN1
+selOut[0] <= rotateDisplay:rotateThread.selOut
+selOut[1] <= rotateDisplay:rotateThread.selOut
+selOut[2] <= rotateDisplay:rotateThread.selOut
+selOut[3] <= rotateDisplay:rotateThread.selOut
+seg[0] <= BCD7Seg:segThread.seg
+seg[1] <= BCD7Seg:segThread.seg
+seg[2] <= BCD7Seg:segThread.seg
+seg[3] <= BCD7Seg:segThread.seg
+seg[4] <= BCD7Seg:segThread.seg
+seg[5] <= BCD7Seg:segThread.seg
+seg[6] <= BCD7Seg:segThread.seg
+
+
+|SPIComms_top|clkDiv:clkThread
+clk_in => clk_out[0]~reg0.CLK
+clk_in => clk_out[1]~reg0.CLK
+clk_in => clk_out[2]~reg0.CLK
+clk_in => clk_out[3]~reg0.CLK
+clk_in => clk_out[4]~reg0.CLK
+clk_in => clk_out[5]~reg0.CLK
+clk_in => clk_out[6]~reg0.CLK
+clk_in => clk_out[7]~reg0.CLK
+clk_in => clk_out[8]~reg0.CLK
+clk_in => clk_out[9]~reg0.CLK
+clk_in => clk_out[10]~reg0.CLK
+clk_in => clk_out[11]~reg0.CLK
+clk_in => clk_out[12]~reg0.CLK
+clk_in => clk_out[13]~reg0.CLK
+clk_in => clk_out[14]~reg0.CLK
+clk_in => clk_out[15]~reg0.CLK
+clk_in => clk_out[16]~reg0.CLK
+clk_in => clk_out[17]~reg0.CLK
+clk_in => clk_out[18]~reg0.CLK
+clk_in => clk_out[19]~reg0.CLK
+clk_in => clk_out[20]~reg0.CLK
+clk_in => clk_out[21]~reg0.CLK
+clk_in => clk_out[22]~reg0.CLK
+clk_in => clk_out[23]~reg0.CLK
+clk_out[0] <= clk_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[1] <= clk_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[2] <= clk_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[3] <= clk_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[4] <= clk_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[5] <= clk_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[6] <= clk_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[7] <= clk_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[8] <= clk_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[9] <= clk_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[10] <= clk_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[11] <= clk_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[12] <= clk_out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[13] <= clk_out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[14] <= clk_out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[15] <= clk_out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[16] <= clk_out[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[17] <= clk_out[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[18] <= clk_out[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[19] <= clk_out[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[20] <= clk_out[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[21] <= clk_out[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[22] <= clk_out[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out[23] <= clk_out[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SPIComms_top|SPI_Module:SPIThread
+clk => input_shiftreg[0]~reg0.CLK
+clk => input_shiftreg[1]~reg0.CLK
+clk => input_shiftreg[2]~reg0.CLK
+clk => input_shiftreg[3]~reg0.CLK
+clk => input_shiftreg[4]~reg0.CLK
+clk => input_shiftreg[5]~reg0.CLK
+clk => input_shiftreg[6]~reg0.CLK
+clk => input_shiftreg[7]~reg0.CLK
+clk => input_shiftreg[8]~reg0.CLK
+clk => input_shiftreg[9]~reg0.CLK
+clk => input_shiftreg[10]~reg0.CLK
+clk => input_shiftreg[11]~reg0.CLK
+clk => input_shiftreg[12]~reg0.CLK
+clk => input_shiftreg[13]~reg0.CLK
+clk => input_shiftreg[14]~reg0.CLK
+clk => input_shiftreg[15]~reg0.CLK
+clk => current_state.CLK
+clk => cs_record[0].CLK
+clk => cs_record[1].CLK
+clk => cs_record[2].CLK
+clk => sck_record[0].CLK
+clk => sck_record[1].CLK
+clk => sck_record[2].CLK
+sck => sck_record[0].DATAIN
+mosi => input_shiftreg.DATAB
+cs => cs_record[0].DATAIN
+input_shiftreg[0] <= input_shiftreg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[1] <= input_shiftreg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[2] <= input_shiftreg[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[3] <= input_shiftreg[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[4] <= input_shiftreg[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[5] <= input_shiftreg[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[6] <= input_shiftreg[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[7] <= input_shiftreg[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[8] <= input_shiftreg[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[9] <= input_shiftreg[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[10] <= input_shiftreg[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[11] <= input_shiftreg[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[12] <= input_shiftreg[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[13] <= input_shiftreg[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[14] <= input_shiftreg[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+input_shiftreg[15] <= input_shiftreg[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done <= <GND>
+
+
+|SPIComms_top|Bin2BCD:bcdThread
+binary[0] => hundreds[0].DATAIN
+binary[1] => LessThan6.IN8
+binary[1] => Add6.IN8
+binary[1] => hundreds.DATAA
+binary[2] => LessThan4.IN8
+binary[2] => Add4.IN8
+binary[2] => hundreds.DATAA
+binary[3] => LessThan2.IN8
+binary[3] => Add2.IN8
+binary[3] => hundreds.DATAA
+binary[4] => LessThan1.IN8
+binary[4] => Add1.IN8
+binary[4] => hundreds.DATAA
+binary[5] => LessThan0.IN6
+binary[5] => Add0.IN6
+binary[5] => hundreds.DATAA
+binary[6] => LessThan0.IN5
+binary[6] => Add0.IN5
+binary[6] => hundreds.DATAA
+binary[7] => LessThan0.IN4
+binary[7] => Add0.IN4
+binary[7] => hundreds.DATAA
+thousands[0] <= hundreds.DB_MAX_OUTPUT_PORT_TYPE
+thousands[1] <= thousands.DB_MAX_OUTPUT_PORT_TYPE
+thousands[2] <= thousands.DB_MAX_OUTPUT_PORT_TYPE
+thousands[3] <= thousands.DB_MAX_OUTPUT_PORT_TYPE
+hundreds[0] <= binary[0].DB_MAX_OUTPUT_PORT_TYPE
+hundreds[1] <= hundreds.DB_MAX_OUTPUT_PORT_TYPE
+hundreds[2] <= hundreds.DB_MAX_OUTPUT_PORT_TYPE
+hundreds[3] <= hundreds.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SPIComms_top|Bin2BCD_2:bcd2Thread
+binary[0] => ones[0].DATAIN
+binary[1] => LessThan6.IN8
+binary[1] => Add6.IN8
+binary[1] => ones.DATAA
+binary[2] => LessThan4.IN8
+binary[2] => Add4.IN8
+binary[2] => ones.DATAA
+binary[3] => LessThan2.IN8
+binary[3] => Add2.IN8
+binary[3] => ones.DATAA
+binary[4] => LessThan1.IN8
+binary[4] => Add1.IN8
+binary[4] => ones.DATAA
+binary[5] => LessThan0.IN6
+binary[5] => Add0.IN6
+binary[5] => ones.DATAA
+binary[6] => LessThan0.IN5
+binary[6] => Add0.IN5
+binary[6] => ones.DATAA
+binary[7] => LessThan0.IN4
+binary[7] => Add0.IN4
+binary[7] => ones.DATAA
+tens[0] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= tens.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= tens.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= tens.DB_MAX_OUTPUT_PORT_TYPE
+ones[0] <= binary[0].DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SPIComms_top|rotateDisplay:rotateThread
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+selOut[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+selOut[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+selOut[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+selOut[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SPIComms_top|mux4:muxThread
+A[0] => Mux3.IN0
+A[1] => Mux2.IN0
+A[2] => Mux1.IN0
+A[3] => Mux0.IN0
+B[0] => Mux3.IN1
+B[1] => Mux2.IN1
+B[2] => Mux1.IN1
+B[3] => Mux0.IN1
+C[0] => Mux3.IN2
+C[1] => Mux2.IN2
+C[2] => Mux1.IN2
+C[3] => Mux0.IN2
+D[0] => Mux3.IN3
+D[1] => Mux2.IN3
+D[2] => Mux1.IN3
+D[3] => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[0] => Mux1.IN5
+Sel[0] => Mux2.IN5
+Sel[0] => Mux3.IN5
+Sel[1] => Mux0.IN4
+Sel[1] => Mux1.IN4
+Sel[1] => Mux2.IN4
+Sel[1] => Mux3.IN4
+Y[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SPIComms_top|BCD7Seg:segThread
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

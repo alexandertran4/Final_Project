@@ -1,0 +1,6 @@
+module SPI_Module(clk, sck, mosi, cs input_shiftreg, done);
+
+input clk;
+input sck;
+input mosi;
+input cs;

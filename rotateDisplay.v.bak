@@ -1,0 +1,24 @@
+module rotateDisplay (clk, cnt, selOut);
+
+input clk;
+output [1:0] cnt;
+output [3:0] selOut;
+
+reg [3:0] selOut;
+reg [1:0] cnt = 2'b00;
+
+always @ (posedge clk)
+begin 
+cnt <= cnt + 1'b1;
+end
+
+always @(cnt)
+begin
+case (cnt)
+4'b00: selOut = 4'b1110;
+4'b01: selOut = 4'b1101;
+4'b10: selOut = 4'b1011;
+4'b11: selOut = 4'b0111;
+endcase
+end
+endmodule
